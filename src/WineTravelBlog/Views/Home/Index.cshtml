@@ -5,4 +5,8 @@
     ViewData["Title"] = "Wine Travel Blog";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2 class="center">Welcome to the Wine Travel Blog!</h2>
+<h2 class="center title">Welcome to the Wine Travel Blog!</h2>
+
+<h4 class="center">@Html.ActionLink("Regions", "Index", "Regions")</h4>
+<h4 class="center">@Html.ActionLink("Wineries", "Index", "Wineries")</h4>
+<h4 class="center">@Html.ActionLink("Wines", "Index", "Wines")</h4>
