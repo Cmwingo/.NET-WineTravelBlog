@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Wine Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WineTravelBlog.Models.Winery
+
+<h2>Winery Details</h2>
+<hr />
+
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>@Html.DisplayNameFor(model => model.RegionId) : @Html.DisplayFor(model => model.RegionId)</p>
+<p>@Html.DisplayNameFor(model => model.Location) : @Html.DisplayFor(model => model.Location)</p>
+<p>@Html.DisplayNameFor(model => model.Style) : @Html.DisplayFor(model => model.Style)</p>
+<p>@Html.DisplayNameFor(model => model.PrimaryVarietals) : @Html.DisplayFor(model => model.PrimaryVarietals)</p>
+<p>@Html.DisplayNameFor(model => model.AvgPrice) : @Html.DisplayFor(model => model.AvgPrice)</p>
+
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.WineryId }) | @Html.ActionLink("Back to List", "Index")</p>
