@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Wine Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WineTravelBlog.Models.Wine
+
+<h2>Wine Details</h2>
+<hr />
+
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>@Html.DisplayNameFor(model => model.WineryId) : @Html.DisplayFor(model => model.WineryId)</p>
+<p>@Html.DisplayNameFor(model => model.Type) : @Html.DisplayFor(model => model.Type)</p>
+<p>@Html.DisplayNameFor(model => model.Nose) : @Html.DisplayFor(model => model.Nose)</p>
+<p>@Html.DisplayNameFor(model => model.Body) : @Html.DisplayFor(model => model.Body)</p>
+<p>@Html.DisplayNameFor(model => model.Pallete) : @Html.DisplayFor(model => model.Pallete)</p>
+<p>@Html.DisplayNameFor(model => model.Price) : @Html.DisplayFor(model => model.Price)</p>
+<p>@Html.DisplayNameFor(model => model.Comments) : @Html.DisplayFor(model => model.Comments)</p>
+<p>@Html.DisplayNameFor(model => model.OverAllRating) : @Html.DisplayFor(model => model.OverAllRating)</p>
+
+
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.WineId }) | @Html.ActionLink("Back to List", "Index")</p>

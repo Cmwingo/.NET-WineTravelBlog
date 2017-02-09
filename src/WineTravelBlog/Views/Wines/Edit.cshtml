@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Wine Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WineTravelBlog.Models.Wine
+
+<h2>Edit</h2>
+<hr />
+<h4>Edit this winery: @Html.DisplayFor(model => model.Name)</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.WineId)
+
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Type)
+    @Html.EditorFor(model => model.Type)
+
+    @Html.LabelFor(model => model.Nose)
+    @Html.EditorFor(model => model.Nose)
+
+    @Html.LabelFor(model => model.Body)
+    @Html.EditorFor(model => model.Body)
+
+    @Html.LabelFor(model => model.Pallete)
+    @Html.EditorFor(model => model.Pallete)
+
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price)
+
+    @Html.LabelFor(model => model.Comments)
+    @Html.EditorFor(model => model.Comments)
+
+    @Html.LabelFor(model => model.OverAllRating)
+    @Html.EditorFor(model => model.OverAllRating)
+
+    @Html.LabelFor(model => model.WineryId)
+    @Html.DropDownList("WineryId")
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")
