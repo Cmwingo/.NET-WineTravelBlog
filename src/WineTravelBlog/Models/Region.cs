@@ -15,7 +15,7 @@ namespace WineTravelBlog.Models
         public string Name { get; set; }
         public string Location { get; set; }
         public string GrowingSeason { get; set; }
-        public float AvgRainfall { get; set; }
+        public decimal AvgRainfall { get; set; }
         public virtual ICollection<Winery> Wineries { get; set; }
         public virtual ICollection<Wine> Wines { get; set; }
     }

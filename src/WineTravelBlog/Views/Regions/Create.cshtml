@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Wine Travel Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WineTravelBlog.Models.Region
+
+<h2>Create</h2>
+<hr />
+<h4>Add a new Region</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.Location)
+    @Html.TextBoxFor(model => model.Location)
+    @Html.LabelFor(model => model.GrowingSeason)
+    @Html.TextBoxFor(model => model.GrowingSeason)
+    @Html.LabelFor(model => model.AvgRainfall)
+    @Html.TextBoxFor(model => model.AvgRainfall)
+
+    <input type="submit" value="Add new region" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>

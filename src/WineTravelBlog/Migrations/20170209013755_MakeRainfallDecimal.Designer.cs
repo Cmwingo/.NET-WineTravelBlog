@@ -8,9 +8,10 @@ using WineTravelBlog.Models;
 namespace WineTravelBlog.Migrations
 {
     [DbContext(typeof(WineBlogDbContext))]
-    partial class WineBlogDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170209013755_MakeRainfallDecimal")]
+    partial class MakeRainfallDecimal
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
