@@ -20,6 +20,12 @@ a:visited{
     font-size: 200%;
     font-style: italic;
 }
+input {
+    color: black;
+}
+select {
+    color: black;
+}
 
 .header {
     margin: 0;

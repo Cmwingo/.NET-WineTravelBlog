@@ -9,38 +9,54 @@
 
 <h2>Edit</h2>
 <hr />
-<h4>Edit this winery: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Edit this wine: @Html.DisplayFor(model => model.Name)</h4>
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.WineId)
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Type)
+        @Html.TextBoxFor(model => model.Type, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+        @Html.LabelFor(model => model.Nose)
+        @Html.TextBoxFor(model => model.Nose, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Type)
-    @Html.EditorFor(model => model.Type)
+        @Html.LabelFor(model => model.Body)
+        @Html.TextBoxFor(model => model.Body, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Nose)
-    @Html.EditorFor(model => model.Nose)
+        @Html.LabelFor(model => model.Pallete)
+        @Html.TextBoxFor(model => model.Pallete, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Body)
-    @Html.EditorFor(model => model.Body)
+        @Html.LabelFor(model => model.Price)
+        @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Pallete)
-    @Html.EditorFor(model => model.Pallete)
+        @Html.LabelFor(model => model.Comments)
+        @Html.TextBoxFor(model => model.Comments, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Price)
-    @Html.EditorFor(model => model.Price)
+        @Html.LabelFor(model => model.OverAllRating)
+        @Html.TextBoxFor(model => model.OverAllRating, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
 
-    @Html.LabelFor(model => model.Comments)
-    @Html.EditorFor(model => model.Comments)
-
-    @Html.LabelFor(model => model.OverAllRating)
-    @Html.EditorFor(model => model.OverAllRating)
-
-    @Html.LabelFor(model => model.WineryId)
-    @Html.DropDownList("WineryId")
+        @Html.LabelFor(model => model.WineryId)
+        @Html.DropDownList("WineryId", null, new { @class = "form-control" })
+    </div>
 
     <input type="submit" value="Save" class="btn btn-default" />
-}
-@Html.ActionLink("Back to List", "Index")
+    }
+    @Html.ActionLink("Back to List", "Index")
