@@ -1,0 +1,16 @@
+﻿@model IEnumerable<WineTravelBlog.Models.WineCategory>
+
+<h2>Wine Categories</h2>
+<hr />
+<ol>
+    @foreach (var category in Model)
+    {
+        <li>
+            <ul>
+                <li>Category: @Html.DisplayFor(modelItem => category.Name)</li>
+            </ul>
+        </li>
+    }
+</ol>
+
+@Html.ActionLink("Back home", "Index")
