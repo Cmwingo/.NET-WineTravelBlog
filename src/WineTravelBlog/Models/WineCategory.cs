@@ -15,6 +15,7 @@ namespace WineTravelBlog.Models
         public string Id { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
+        public List<WineCategory> Refinements { get; set; }
         
 
         public static List<WineCategory> GetCategories()

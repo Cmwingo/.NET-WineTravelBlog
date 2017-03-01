@@ -8,6 +8,14 @@
         <li>
             <ul>
                 <li>Category: @Html.DisplayFor(modelItem => category.Name)</li>
+                @{ 
+                    int counter = 1;
+                }
+                @foreach(var refinement in category.Refinements)
+                {
+                    <p>Refinement @counter: @refinement.Name</p>
+                    counter++;
+                }
             </ul>
         </li>
     }
